@@ -16,7 +16,7 @@ num_in_list.append(number_array)
 
 index1 = []
 index2 = []
-1
+
 
 # temp solution// take out current number from the  list the do current number + 
 # every other elements excpet the one that was taken out
