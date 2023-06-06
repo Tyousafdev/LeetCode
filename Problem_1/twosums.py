@@ -1,6 +1,6 @@
 #GIVEN VALUES
 number_array = [1,2,3,4]
-target = [3]
+target = [5]
 
 
 array_limit = 0
