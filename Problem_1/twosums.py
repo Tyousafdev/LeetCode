@@ -1,43 +1,51 @@
 #GIVEN VALUES
-number_array = [1,2,3,4]
-target = [3]
+nums = [2,5,6,7]
+target = [11]
 
 
 array_limit = 0
 two_sum = ["[0], [1]"]
 
 
-current_integer = []
+current_number = nums[0]
 num_in_list = []
 
 #changed temp = -->
-num_in_list.append(number_array)
+num_in_list.append(nums)
 
 
 index1 = []
 index2 = []
 
-
+temp_var = []
 # temp solution// take out current number from the  list the do current number + 
 # every other elements excpet the one that was taken out
 def TwoSum():
-        global temp
-        global number_array
-        global target
-        global num_in_list
-        global temp_add
-        global index1
-        global index2
+        
         #make function to add chosen index and add it to the rest of the numbers in the
-        for i in num_in_list[0]:
-                temp_add = num_in_list[0][0] + i
+        for i in nums:
+                temp_add = current_number + i
                 if temp_add == target[0]:
                         print("<<", num_in_list[0][0],"+", i, "=", temp_add,">>")
-                        firstnumber = index1.append(num_in_list[0][0]) 
+                        firstnumber = index1.append(num_in_list[0][0])
                         secNumber = index2.append(i)
-                        print("INDEX NUMBERS",index1, index2) 
-                        break
                         
+                        temp_var.append(index2)
+                        
+
+                        if index1[0] in nums:
+                                index_param1 = nums.index(index1[0])
+                                print("Index of", index1[0], "is", index_param1)
+                                
+
+                        if temp_var[0][0] in nums:
+                                index_param2 = nums.index(temp_var[0][0])
+                                print("Index of", temp_var[0][0], "is", index_param2)
+
+                        #therefore 
+                        print(num_in_list)
+                        print(f"Output: [{index_param1}, {index_param2}]")
+                        break
                       
                 print(num_in_list[0][0], "+", i, "=", temp_add)
 
@@ -47,7 +55,7 @@ def TwoSum():
                 num_in_list[0][0] += 1
                 print("!=",temp_add)
                 TwoSum()
-
+        
 TwoSum()
 
         
